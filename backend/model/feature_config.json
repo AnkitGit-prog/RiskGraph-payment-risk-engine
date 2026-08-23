@@ -1,0 +1,65 @@
+{
+  "feature_order": [
+    "TransactionAmt",
+    "log_amount",
+    "hour",
+    "day",
+    "is_weekend",
+    "card1",
+    "card2",
+    "card3",
+    "card4",
+    "card5",
+    "addr1",
+    "addr2",
+    "ProductCD",
+    "P_emaildomain",
+    "missing_count",
+    "card1_txn_count",
+    "card1_amount_mean",
+    "amount_vs_card_mean",
+    "device_changed"
+  ],
+  "categorical_features": {
+    "card4": {
+      "values": ["visa", "mastercard", "american express", "discover"],
+      "default": "__MISSING__"
+    },
+    "card5": {
+      "values": ["226", "117", "224", "102", "121", "166", "149"],
+      "default": "__MISSING__"
+    },
+    "ProductCD": {
+      "values": ["W", "H", "C", "S", "R"],
+      "default": "__MISSING__"
+    },
+    "P_emaildomain": {
+      "values": [
+        "gmail.com", "yahoo.com", "hotmail.com", "outlook.com",
+        "icloud.com", "live.com", "aol.com", "protonmail.com",
+        "anonymous.com", "__MISSING__"
+      ],
+      "default": "__MISSING__"
+    }
+  },
+  "numeric_features": [
+    "TransactionAmt",
+    "log_amount",
+    "hour",
+    "day",
+    "is_weekend",
+    "card1",
+    "card2",
+    "card3",
+    "addr1",
+    "addr2",
+    "missing_count",
+    "card1_txn_count",
+    "card1_amount_mean",
+    "amount_vs_card_mean",
+    "device_changed"
+  ],
+  "excluded_features": ["card6"],
+  "version": "1.0.0",
+  "notes": "Feature order must match training exactly. card6 excluded from final model."
+}
